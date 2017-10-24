@@ -19,8 +19,6 @@ MainActivity extends AppCompatActivity {
                 startActivity(next);
             }
         });
-
-
     }
 
 
