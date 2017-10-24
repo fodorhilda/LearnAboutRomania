@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "548659363582",
+    "firebase_url": "https://learnaboutromania-97fc6.firebaseio.com",
+    "project_id": "learnaboutromania-97fc6",
+    "storage_bucket": "learnaboutromania-97fc6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548659363582:android:6bde276dad2b09b2",
+        "android_client_info": {
+          "package_name": "com.example.dell.learnaboutromania"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548659363582-63k5etupfanmvmhncunll2qvseikio55.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwmlyMnc69A43xoNfKatliroc7RX-uXUo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
