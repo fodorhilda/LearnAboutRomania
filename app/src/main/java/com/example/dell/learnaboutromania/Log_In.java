@@ -1,17 +1,14 @@
 package com.example.dell.learnaboutromania;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,43 +17,41 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
+public class Log_In extends AppCompatActivity implements View.OnClickListener{
 
-    private Button buttonRegister;
+    private Button ButtonSignIn;
     private EditText editTextEmail;
     private EditText editTextPassword;
-    private TextView TextViewSignin;
-    private ProgressDialog progressDialog;
+    private TextView textViewSignUp;
     private FirebaseAuth firebaseAuth;
+    private ProgressDialog progressDialog;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_log__in);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        if( firebaseAuth.getCurrentUser()!= null) {
-
-                finish();
-                startActivity( new Intent(getApplicationContext(),LogoutActivity.class));
-            }
-
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        TextViewSignin = (TextView) findViewById(R.id.textViewSignin);
+        editTextEmail=(EditText) findViewById(R.id.editTextEmail);
+        editTextPassword=(EditText) findViewById(R.id.editTextPassword);
+        ButtonSignIn=(Button) findViewById(R.id.buttonLogin);
+        textViewSignUp=(TextView) findViewById(R.id.textViewSignup);
         progressDialog = new ProgressDialog(this);
+        ButtonSignIn.setOnClickListener(this);
+        textViewSignUp.setOnClickListener(this);
 
-        buttonRegister.setOnClickListener(this);
-        TextViewSignin.setOnClickListener(this);
+        if( firebaseAuth.getCurrentUser() != null) {
+            finish();
+            startActivity( new Intent(getApplicationContext(),LogoutActivity.class));
+        }
 
     }
 
-    private void registerUser() {
+    private void userLogin(){
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
-
+    // verifica daca s-a introdus e-mail si parola
         if (TextUtils.isEmpty(email)) {
             //nu au scris e-mail
             Toast.makeText(this, "Enter you e-mail", Toast.LENGTH_SHORT).show();
@@ -70,42 +65,43 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
         }
 
-        progressDialog.setMessage("Registering..");
+        progressDialog.setMessage("Signing Up...");
         progressDialog.show();
-        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
+        firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
+                progressDialog.dismiss();
                 if (task.isSuccessful()) {
-
                     finish();
-                    startActivity(new Intent(getApplicationContext(), LogoutActivity.class));
-
-                }
-                 else {
+                    startActivity( new Intent(getApplicationContext(),LogoutActivity.class));
+                } else {
                     Toast.makeText(
-                            SecondActivity.this,
+                            Log_In.this,
                             "Error: " + task.getException().getMessage(),
                             Toast.LENGTH_SHORT
                     ).show();
                 }
             }
-
         });
-        progressDialog.dismiss();
+
+
+
 
     }
 
-
     @Override
     public void onClick(View v) {
-
-        if (v == buttonRegister) {
-            registerUser();
+        if(v==ButtonSignIn)
+        {
+            userLogin();
+        }
+        if(v==textViewSignUp)
+        {
+            finish(); // inchidem aceasta activitate
+            startActivity(new Intent(this, SecondActivity.class )); // trecem inapoi la pagina de Sign Up
         }
 
-        if (v == TextViewSignin) {
-             startActivity(new Intent(this, Log_In.class));
-
-        }
     }
 }
