@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ThirdActivity extends AppCompatActivity {
+public class ChooseActivity extends AppCompatActivity {
 
 
     @Override
@@ -32,7 +32,7 @@ public class ThirdActivity extends AppCompatActivity {
 
         /*BestPlaces.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), ThirdActivity.class);
+                Intent startIntent = new Intent(getApplicationContext(), ChooseActivity.class);
                 //cum sa mergem pe o alta activitate
                 startActivity(startIntent);
             }
@@ -40,7 +40,7 @@ public class ThirdActivity extends AppCompatActivity {
 
         LearnRomanian.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(),  ThirdActivity.class);
+                Intent startIntent = new Intent(getApplicationContext(),  ChooseActivity.class);
                 //cum sa mergem pe o alta activitate
                 startActivity(startIntent);
             }

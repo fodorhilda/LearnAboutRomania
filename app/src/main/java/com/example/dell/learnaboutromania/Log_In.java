@@ -75,7 +75,7 @@ public class Log_In extends AppCompatActivity implements View.OnClickListener{
                 progressDialog.dismiss();
                 if (task.isSuccessful()) {
                     finish();
-                    startActivity( new Intent(getApplicationContext(),ThirdActivity.class));
+                    startActivity( new Intent(getApplicationContext(),ChooseActivity.class));
                 } else {
                     Toast.makeText(
                             Log_In.this,

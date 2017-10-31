@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity" />
-        <activity android:name=".ThirdActivity" />
+        <activity android:name=".ChooseActivity" />
         <activity android:name=".History"></activity>
         <activity android:name=".Log_In" />
         <activity android:name=".LogoutActivity"></activity>
