@@ -25,7 +25,7 @@ public class LogoutActivity extends AppCompatActivity implements View.OnClickLis
             finish();
             startActivity(new Intent(this, Log_In.class));
         }
-      FirebaseUser user= firebaseAuth.getCurrentUser();
+
 
         buttonLogout=(Button)findViewById(R.id.buttonlogout);
         buttonLogout.setOnClickListener(this);
@@ -33,6 +33,10 @@ public class LogoutActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
+        if(v==buttonLogout)
+        {firebaseAuth.signOut();
+        finish();
+        startActivity(new Intent(this, Log_In.class));}
 
     }
 }

@@ -65,7 +65,7 @@ public class Log_In extends AppCompatActivity implements View.OnClickListener{
 
         }
 
-        progressDialog.setMessage("Signing Up...");
+        progressDialog.setMessage("Loging in...");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -75,7 +75,7 @@ public class Log_In extends AppCompatActivity implements View.OnClickListener{
                 progressDialog.dismiss();
                 if (task.isSuccessful()) {
                     finish();
-                    startActivity( new Intent(getApplicationContext(),LogoutActivity.class));
+                    startActivity( new Intent(getApplicationContext(),ThirdActivity.class));
                 } else {
                     Toast.makeText(
                             Log_In.this,
