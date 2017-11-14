@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "548659363582-iasihd9i8mjvqv4o6eg89opsmvcq5lo1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dell.learnaboutromania",
+            "certificate_hash": "0f6ec4a38b5258ccc918a7b3988afb7c9d157bd1"
+          }
+        },
+        {
           "client_id": "548659363582-63k5etupfanmvmhncunll2qvseikio55.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548659363582-63k5etupfanmvmhncunll2qvseikio55.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

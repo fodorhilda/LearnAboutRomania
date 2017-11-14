@@ -29,6 +29,7 @@
         <activity android:name=".ChooseActivity" />
         <activity android:name=".History" />
         <activity android:name=".Log_In" />
+        <activity android:name=".Online_dictionary"/>
         <activity android:name=".LogoutActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

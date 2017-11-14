@@ -38,16 +38,15 @@ public class ChooseActivity extends AppCompatActivity {
             }
         });
 
-        /*
         LearnRomanian.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(),  ChooseActivity.class);
+                Intent startIntent = new Intent(getApplicationContext(),  Online_dictionary.class);
                 //cum sa mergem pe o alta activitate
                 startActivity(startIntent);
             }
         });
 
-        TraditionalStuffs.setOnClickListener(new View.OnClickListener() {
+    /*    TraditionalStuffs.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), TraditionalStuffs.class);
                 //cum sa mergem pe o alta activitate
