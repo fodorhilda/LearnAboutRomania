@@ -30,14 +30,15 @@ public class ChooseActivity extends AppCompatActivity {
         });
 
 
-        /*BestPlaces.setOnClickListener(new View.OnClickListener() {
+        BestPlaces.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), ChooseActivity.class);
+                Intent startIntent = new Intent(getApplicationContext(), MapsActivity.class);
                 //cum sa mergem pe o alta activitate
                 startActivity(startIntent);
             }
         });
 
+        /*
         LearnRomanian.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(),  ChooseActivity.class);
