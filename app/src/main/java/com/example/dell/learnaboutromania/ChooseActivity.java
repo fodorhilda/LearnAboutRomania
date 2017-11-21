@@ -19,12 +19,8 @@ import java.util.Map;
 
 public class ChooseActivity extends AppCompatActivity {
 
-   private DatabaseReference databaseref;
-    private ListView listviewfood;
-    private ArrayList<String> foodenglish = new ArrayList<>();
-    private ArrayList<String> foodromanian = new ArrayList<>();
 
-   // private Map<Object, Object> foods;
+
 
 
     @Override
@@ -35,7 +31,7 @@ public class ChooseActivity extends AppCompatActivity {
         Button History = (Button) findViewById(R.id.History);
         Button BestPlaces = (Button) findViewById(R.id.BestPlaces);
         Button LearnRomanian = (Button) findViewById(R.id.LearnRomanian);
-        Button TraditionalStuffs = (Button) findViewById(R.id.TraditionalStuffs);
+
 
 
         History.setOnClickListener(new View.OnClickListener() {
@@ -64,67 +60,14 @@ public class ChooseActivity extends AppCompatActivity {
             }
         });
 
-        TraditionalStuffs.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //DatabaseManager databaseManager = new DatabaseManager();
-               //// databaseManager.populatefoods();
-               // System.out.println(databaseManager.getFoods());
-
-               databaseref = FirebaseDatabase.getInstance().getReference();
-//
-//                databaseref.addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(DataSnapshot dataSnapshot) {
-//                        foods = (Map<Object, Object>) dataSnapshot.getValue();
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(DatabaseError databaseError) {
-//
-//                    }
-//                });
-
-//                databaseref.addChildEventListener(new ChildEventListener() {
-//                    @Override
-//                    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//                        for (DataSnapshot childSnapshot : dataSnapshot.getChildren()) {
-//                            String foodeng = (String) childSnapshot.getKey();
-//                            String foodro = childSnapshot.getValue(String.class);
-//
-//                            foodromanian.add(foodro);
-//                            foodenglish.add(foodeng);
-//                        }
-//                        // !!!!!.notifyDataSetChanged();
-//                    }
-//
-//                    @Override
-//                    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onChildRemoved(DataSnapshot dataSnapshot) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(DatabaseError databaseError) {
-//
-//                    }
-//                });
 
 
-                Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
 
-                //cum sa mergem pe o alta activitate
-                startActivity(startIntent);
-            }
-        });
+
+
+
+
+
 
     }
 }

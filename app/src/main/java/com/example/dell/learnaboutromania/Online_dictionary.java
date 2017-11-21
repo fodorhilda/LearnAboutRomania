@@ -75,11 +75,11 @@ public class Online_dictionary extends AppCompatActivity {
                         Intent food = new Intent(getApplicationContext(), Food.class);
                         startActivity(food);
                         break;
-                   /* case 1:
-                        Intent people = new Intent(this, People.class);
+                   case 1:
+                        Intent people = new Intent(getApplicationContext(), People.class);
                         startActivity(people);
                         break;
-                    case 2:
+                  /*  case 2:
                         Intent clothes = new Intent(this, Clothes.class);
                         startActivity(clothes);
                     case 3:

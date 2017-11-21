@@ -18,43 +18,37 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Food extends AppCompatActivity {
+public class People extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference databaseref;
-    ListView listviewfood;
-    private ArrayList<String> foodenglish = new ArrayList<>();
-    private ArrayList<String> foodromanian = new ArrayList<>();
-    HashMap<Object, Object> foods;
+    ListView listviewpeople;
+    private ArrayList<String> peopleenglish = new ArrayList<>();
+    private ArrayList<String> peopleromanian = new ArrayList<>();
+    HashMap<Object, Object> people;
 
-
-    String foodro, foodeng;
-
+    String peopleRo, peopleEng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food);
+        setContentView(R.layout.activity_people);
 
+        people = DatabaseManager.getPeople();
 
-
-
-
-        foods = DatabaseManager.getFoods();
-
-        for (Object key : foods.keySet()) {
-            foodeng = (String) key;
-            foodro = (String) foods.get(key);
-            foodenglish.add(foodeng);
-            foodromanian.add(foodro);
+        for (Object key : people.keySet()) {
+            peopleEng = (String) key;
+            peopleRo = (String) people.get(key);
+            peopleenglish.add(peopleEng);
+            peopleromanian.add(peopleRo);
         }
 
-        listviewfood = (ListView) findViewById(R.id.ListViewFood);
+        listviewpeople = (ListView) findViewById(R.id.ListViewPeople);
 
         class CustomAdapter extends BaseAdapter {
             @Override
             public int getCount() {
-                return foodenglish.size();
+                return peopleenglish.size();
             }
 
             @Override
@@ -73,18 +67,15 @@ public class Food extends AppCompatActivity {
 
                 TextView text = (TextView) view.findViewById(R.id.textView5);
                 TextView text2 = (TextView) view.findViewById(R.id.textView6);
-                text.setText(foodenglish.get(position));
-                text2.setText(foodromanian.get(position));
+                text.setText(peopleenglish.get(position));
+                text2.setText(peopleromanian.get(position));
                 return view;
             }
         }
 
         CustomAdapter CustomAdapter = new CustomAdapter();
-        listviewfood.setAdapter(CustomAdapter);
+        listviewpeople.setAdapter(CustomAdapter);
     }
 
 
 }
-
-
-

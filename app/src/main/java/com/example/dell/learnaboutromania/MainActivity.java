@@ -13,6 +13,11 @@ MainActivity extends AppCompatActivity {
     public Button signup;
     public void init(){
         DatabaseManager.populatefoods();
+        DatabaseManager.populatepeople();
+        DatabaseManager.populateclothes();
+        DatabaseManager.populateobjects();
+        DatabaseManager.populateslang();
+
 
         login=(Button)findViewById(R.id.buttonLogIn);
         signup=(Button)findViewById(R.id.buttonSignUp);
