@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.dell.learnaboutromania.model.City;
+
 public class Places extends AppCompatActivity {
     // private Button button2;
 
@@ -71,19 +73,24 @@ public class Places extends AppCompatActivity {
                 ImageView image = (ImageView) view.findViewById(R.id.imageView3);
                 TextView text = (TextView) view.findViewById(R.id.textView5);
                 Button button = (Button) view.findViewById(R.id.button2);
+                final String name= words[position];
 
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        City city =PlacesDatabaseManager.getCityByName(name);
                         Intent startIntent = new Intent(getApplicationContext(), MapsActivity.class);
+                        startIntent.putExtra("Longitude",city.getCoordinates().getLongitude());
+                        startIntent.putExtra("Latitude",city.getCoordinates().getLatitude());
                         startActivity(startIntent);
+
                     }
 
                 });
 
 
                 image.setImageResource(images[position]);
-                text.setText(words[position]);
+                text.setText(name);
                 return view;
             }
 

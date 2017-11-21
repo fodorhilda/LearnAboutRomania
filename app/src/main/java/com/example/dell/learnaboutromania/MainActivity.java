@@ -17,6 +17,7 @@ MainActivity extends AppCompatActivity {
         DatabaseManager.populateclothes();
         DatabaseManager.populateobjects();
         DatabaseManager.populateslang();
+        PlacesDatabaseManager.populatePlaces();
 
 
         login=(Button)findViewById(R.id.buttonLogIn);
