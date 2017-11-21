@@ -1,9 +1,11 @@
 package com.example.dell.learnaboutromania;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -60,5 +62,39 @@ public class Online_dictionary extends AppCompatActivity {
 
         CustomAdapter customAdapter = new CustomAdapter();
         listViewDictionary.setAdapter(customAdapter);
+
+        listViewDictionary.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                int itemPosition = position;
+
+                switch (itemPosition) {
+
+                    case 0:
+                        Intent food = new Intent(getApplicationContext(), Food.class);
+                        startActivity(food);
+                        break;
+                   /* case 1:
+                        Intent people = new Intent(this, People.class);
+                        startActivity(people);
+                        break;
+                    case 2:
+                        Intent clothes = new Intent(this, Clothes.class);
+                        startActivity(clothes);
+                    case 3:
+                        Intent object = new Intent(this, Objects.class);
+                        startActivity(object);
+                        break;
+                    case 4:
+                        Intent slang = new Intent(this, Slang.class);
+                        startActivity(slang);
+                        break;
+                }*/
+                }
+
+
+            }
+        });
     }
 }

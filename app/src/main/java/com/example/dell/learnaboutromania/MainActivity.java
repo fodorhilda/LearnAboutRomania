@@ -12,6 +12,8 @@ MainActivity extends AppCompatActivity {
     public Button login;
     public Button signup;
     public void init(){
+        DatabaseManager.populatefoods();
+
         login=(Button)findViewById(R.id.buttonLogIn);
         signup=(Button)findViewById(R.id.buttonSignUp);
         login.setOnClickListener(new View.OnClickListener() {

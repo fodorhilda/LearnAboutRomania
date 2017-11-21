@@ -29,7 +29,7 @@
         <activity android:name=".ChooseActivity" />
         <activity android:name=".History" />
         <activity android:name=".Log_In" />
-        <activity android:name=".Online_dictionary"/>
+        <activity android:name=".Online_dictionary" />
         <activity android:name=".LogoutActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -45,7 +45,8 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Food"></activity>
     </application>
 
 </manifest>
