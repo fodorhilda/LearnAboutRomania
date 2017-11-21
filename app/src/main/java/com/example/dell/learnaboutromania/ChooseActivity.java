@@ -50,7 +50,7 @@ public class ChooseActivity extends AppCompatActivity {
 
         BestPlaces.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), MapsActivity.class);
+                Intent startIntent = new Intent(getApplicationContext(), Places.class);
                 //cum sa mergem pe o alta activitate
                 startActivity(startIntent);
             }
