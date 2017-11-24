@@ -19,29 +19,26 @@ public class Places extends AppCompatActivity {
     private ListView Places1;
     private int[] images = {
             R.drawable.brasov,
-            R.drawable.muntiirodnei,
-            R.drawable.sighetulmarmatiei,
-            R.drawable.laculsfantaana,
-            R.drawable.suceava,
-            R.drawable.deltadunarii,
-            R.drawable.transfagarasan,
-            R.drawable.sighisoara,
-            R.drawable.sibiu,
-            R.drawable.cimitirulvesel,
-            R.drawable.rosiamontana,
-            R.drawable.clujnapoca,
+            R.drawable.castelulpeles,
             R.drawable.cazaneledunarii,
             R.drawable.cetateaalbaiulia,
-            R.drawable.castelulpeles
+            R.drawable.cimitirulvesel,
+            R.drawable.clujnapoca,
+            R.drawable.deltadunarii,
+            R.drawable.laculsfantaana,
+            R.drawable.muntiirodnei,
+            R.drawable.rosiamontana,
+            R.drawable.sibiu,
+            R.drawable.sighetulmarmatiei,
+            R.drawable.sighisoara,
+            R.drawable.suceava,
+            R.drawable.transfagarasan,
     };
 
 
-    private String[] words =
-            {"Brasov", "Muntii_Rodnei", "Sighetul_Mrmatiei", "Lacul_Sfanta_Ana", "Suceava",
-                    "Delta_Dunarii", "Transfagarasan", "Sighisoara", "Sibiu", "Cimitirul_vesel",
-                    "Rosia_montana", "Cluj_napoca", "Cazanele_dunarii", "Cetatea_albaiulia",
-                    "Castelul_peles"
-            };
+    private String[] words ={"Brasov","Castelul_peles","Cazanele_dunarii","Cetatea_albaiulia",
+            "Cimitirul_vesel","Cluj_napoca","Delta_Dunarii","Lacul_Sfanta_Ana","Muntii_Rodnei",
+            "Rosia_montana","Sibiu","Sighetul_Mrmatiei","Sighisoara","Suceava","Transfagarasan"};
 
 
     @Override
@@ -72,13 +69,17 @@ public class Places extends AppCompatActivity {
                 View view = getLayoutInflater().inflate(R.layout.layout_for_places, null);
                 ImageView image = (ImageView) view.findViewById(R.id.imageView3);
                 TextView text = (TextView) view.findViewById(R.id.textView5);
+                TextView descriptionTextView = (TextView) view.findViewById(R.id.description);
+
                 Button button = (Button) view.findViewById(R.id.button2);
                 final String name= words[position];
+                final City city =PlacesDatabaseManager.getCityByName(name);
+                final String description=city.getDescription();
 
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        City city =PlacesDatabaseManager.getCityByName(name);
+
                         Intent startIntent = new Intent(getApplicationContext(), MapsActivity.class);
                         startIntent.putExtra("Longitude",city.getCoordinates().getLongitude());
                         startIntent.putExtra("Latitude",city.getCoordinates().getLatitude());
@@ -91,6 +92,8 @@ public class Places extends AppCompatActivity {
 
                 image.setImageResource(images[position]);
                 text.setText(name);
+                descriptionTextView.setText(description);
+
                 return view;
             }
 
