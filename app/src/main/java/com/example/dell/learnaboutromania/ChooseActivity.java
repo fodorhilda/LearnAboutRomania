@@ -31,6 +31,7 @@ public class ChooseActivity extends AppCompatActivity {
         Button History = (Button) findViewById(R.id.History);
         Button BestPlaces = (Button) findViewById(R.id.BestPlaces);
         Button LearnRomanian = (Button) findViewById(R.id.LearnRomanian);
+        Button TestYourself = (Button) findViewById(R.id.TryYourself);
 
 
 
@@ -59,6 +60,16 @@ public class ChooseActivity extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
+
+        TestYourself.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), TestYourself.class);
+                //cum sa mergem pe o alta activitate
+                startActivity(startIntent);
+            }
+        });
+
+
 
 
 
