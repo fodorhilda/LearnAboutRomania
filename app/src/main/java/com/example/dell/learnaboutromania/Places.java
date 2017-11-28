@@ -36,9 +36,9 @@ public class Places extends AppCompatActivity {
     };
 
 
-    private String[] words ={"Brasov","Castelul_peles","Cazanele_dunarii","Cetatea_albaiulia",
-            "Cimitirul_vesel","Cluj_napoca","Delta_Dunarii","Lacul_Sfanta_Ana","Muntii_Rodnei",
-            "Rosia_montana","Sibiu","Sighetul_Mrmatiei","Sighisoara","Suceava","Transfagarasan"};
+    private String[] words = {"Brasov", "Castelul Peles", "Cazanele Dunarii", "Cetatea Alba Iulia",
+            "Cimitirul Vesel", "Cluj-Napoca", "Delta Dunarii", "Lacul Sfanta Ana", "Muntii Rodnei",
+            "Rosia Montana", "Sibiu", "Sighetul Marmatiei", "Sighisoara", "Suceava", "Transfagarasan"};
 
 
     @Override
@@ -67,33 +67,36 @@ public class Places extends AppCompatActivity {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 View view = getLayoutInflater().inflate(R.layout.layout_for_places, null);
-                ImageView image = (ImageView) view.findViewById(R.id.imageView3);
-                TextView text = (TextView) view.findViewById(R.id.textView5);
-                TextView descriptionTextView = (TextView) view.findViewById(R.id.description);
+                try {
+                    ImageView image = (ImageView) view.findViewById(R.id.imageView3);
+                    TextView text = (TextView) view.findViewById(R.id.textView5);
+                    TextView descriptionTextView = (TextView) view.findViewById(R.id.description);
 
-                Button button = (Button) view.findViewById(R.id.button2);
-                final String name= words[position];
-                final City city =PlacesDatabaseManager.getCityByName(name);
-                final String description=city.getDescription();
+                    Button button = (Button) view.findViewById(R.id.button2);
+                    final String name = words[position];
+                    final City city = PlacesDatabaseManager.getCityByName(name);
+                    final String description = city.getDescription();
 
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
 
-                        Intent startIntent = new Intent(getApplicationContext(), MapsActivity.class);
-                        startIntent.putExtra("Longitude",city.getCoordinates().getLongitude());
-                        startIntent.putExtra("Latitude",city.getCoordinates().getLatitude());
-                        startActivity(startIntent);
+                            Intent startIntent = new Intent(getApplicationContext(), MapsActivity.class);
+                            startIntent.putExtra("Longitude", city.getCoordinates().getLongitude());
+                            startIntent.putExtra("Latitude", city.getCoordinates().getLatitude());
+                            startActivity(startIntent);
 
-                    }
+                        }
 
-                });
+                    });
 
 
-                image.setImageResource(images[position]);
-                text.setText(name);
-                descriptionTextView.setText(description);
-
+                    image.setImageResource(images[position]);
+                    text.setText(name);
+                    descriptionTextView.setText(description);
+                } catch (Exception ex) {
+                    System.out.println();
+                }
                 return view;
             }
 
