@@ -54,9 +54,9 @@ public class PlacesDatabaseManager {
         return cities;
     }
 
-    public static City getCityByName(String name){
+    public static City getCityByName(String name) {
         for (City city : places) {
-            if( city.getName().equals(name)) {
+            if (city.getName().equals(name)) {
                 return city;
             }
         }
