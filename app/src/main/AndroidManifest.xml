@@ -47,8 +47,11 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".Food" />
-        <activity android:name=".People"></activity>
-        <activity android:name=".Places"></activity>
+        <activity android:name=".People" />
+        <activity android:name=".Places" />
+        <activity android:name=".Phrases" />
+        <activity android:name=".Objects" />
+        <activity android:name=".Adjectives"></activity>
     </application>
 
 </manifest>

@@ -9,26 +9,29 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="363dp"
-        android:layout_height="71dp"
+        android:layout_width="548dp"
+        android:layout_height="115dp"
         android:text="Learn everything about Romania!!!"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
+        android:textSize="45sp"
         android:textStyle="bold|italic"
-        tools:layout_editor_absoluteY="125dp"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.409" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="124dp"
+        tools:layout_editor_absoluteX="14dp" />
 
     <Button
         android:id="@+id/buttonLogIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="488dp"
+        android:layout_height="85dp"
         android:layout_marginTop="179dp"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"
         android:text="Log In"
-        android:textSize="20sp"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -36,12 +39,14 @@
 
     <Button
         android:id="@+id/buttonSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="82dp"
-        android:background="@color/colorAccent"
+        android:layout_width="484dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="52dp"
+
+        android:background="?attr/colorPrimaryDark"
         android:text="Sign Up"
-        android:textSize="20sp"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
