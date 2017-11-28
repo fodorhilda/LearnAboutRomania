@@ -24,7 +24,7 @@ public class Online_dictionary extends AppCompatActivity {
     };
 
     private String[] words =
-            {"Food&Drink", "People&Places", "Clothes", "Object&Things", "Slang words"};
+            {"Food&Drink", "People&Places", "Adjectives", "Object&Things", "Phrases"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,19 +79,19 @@ public class Online_dictionary extends AppCompatActivity {
                         Intent people = new Intent(getApplicationContext(), People.class);
                         startActivity(people);
                         break;
-                  /*  case 2:
-                        Intent clothes = new Intent(this, Clothes.class);
-                        startActivity(clothes);
+                   case 2:
+                        Intent adjectives = new Intent(getApplicationContext(), Adjectives.class);
+                        startActivity(adjectives);
                     case 3:
-                        Intent object = new Intent(this, Objects.class);
+                        Intent object = new Intent(getApplicationContext(), Objects.class);
                         startActivity(object);
                         break;
                     case 4:
-                        Intent slang = new Intent(this, Slang.class);
+                        Intent slang = new Intent(getApplicationContext(), Phrases.class);
                         startActivity(slang);
                         break;
-                }*/
                 }
+
 
 
             }

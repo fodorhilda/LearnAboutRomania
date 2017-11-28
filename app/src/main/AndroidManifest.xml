@@ -49,7 +49,10 @@
         <activity android:name=".Food" />
         <activity android:name=".People" />
         <activity android:name=".Places" />
-        <activity android:name=".TestYourself"></activity>
+        <activity android:name=".Phrases" />
+        <activity android:name=".Objects" />
+        <activity android:name=".Adjectives" />
+        <activity android:name=".TestYourself" />
     </application>
 
 </manifest>

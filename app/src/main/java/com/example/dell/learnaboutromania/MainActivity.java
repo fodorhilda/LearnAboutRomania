@@ -14,9 +14,9 @@ MainActivity extends AppCompatActivity {
     public void init(){
         DatabaseManager.populatefoods();
         DatabaseManager.populatepeople();
-        DatabaseManager.populateclothes();
+        DatabaseManager.populateadjectives();
         DatabaseManager.populateobjects();
-        DatabaseManager.populateslang();
+        DatabaseManager.populatephrases();
         PlacesDatabaseManager.populatePlaces();
 
 

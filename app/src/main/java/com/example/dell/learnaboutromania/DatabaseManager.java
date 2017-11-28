@@ -24,9 +24,9 @@ public class DatabaseManager {
     private static DatabaseReference databaseref5;
     private static HashMap<Object, Object> foods;
     private static HashMap<Object, Object> people;
-    private static HashMap<Object, Object> clothes;
+    private static HashMap<Object, Object> adjectives;
     private static HashMap<Object, Object> objects;
-    private static HashMap<Object, Object> slang;
+    private static HashMap<Object, Object> phrases;
 
     public static void populatefoods() {
         database = FirebaseDatabase.getInstance();
@@ -64,14 +64,14 @@ public class DatabaseManager {
 
     }
 
-    public static void populateclothes() {
+    public static void populateadjectives() {
         database = FirebaseDatabase.getInstance();
-        databaseref3 = database.getReference("Clothes");
+        databaseref3 = database.getReference("Adjectives");
 
         databaseref3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                clothes = (HashMap<Object, Object>) dataSnapshot.getValue();
+                adjectives = (HashMap<Object, Object>) dataSnapshot.getValue();
             }
 
             @Override
@@ -102,14 +102,14 @@ public class DatabaseManager {
     }
 
 
-    public static void populateslang() {
+    public static void populatephrases() {
         database = FirebaseDatabase.getInstance();
-        databaseref5 = database.getReference("Slang");
+        databaseref5 = database.getReference("Phrases");
 
         databaseref5.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                slang = (HashMap<Object, Object>) dataSnapshot.getValue();
+                phrases = (HashMap<Object, Object>) dataSnapshot.getValue();
             }
 
             @Override
@@ -128,15 +128,15 @@ public class DatabaseManager {
         return people;
     }
 
-    public static HashMap<Object, Object> getClothes() {
-        return clothes;
+    public static HashMap<Object, Object> getAdjectives() {
+        return adjectives;
     }
 
     public static HashMap<Object, Object> getObjects() {
         return objects;
     }
 
-    public static HashMap<Object, Object> getSlang() {
-        return slang;
+    public static HashMap<Object, Object> getPhrases() {
+        return phrases;
     }
 }
