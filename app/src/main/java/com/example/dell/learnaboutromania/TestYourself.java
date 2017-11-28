@@ -59,7 +59,7 @@ public class TestYourself extends AppCompatActivity {
         answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (answer1.getText() == mAnswer) {
+                if (answer2.getText() == mAnswer) {
                     mScore++;
                     score.setText("Score:" + mScore);
                     updateQuestion(r.nextInt(mQuestionsLength));

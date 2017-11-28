@@ -41,11 +41,6 @@ public class Log_In extends AppCompatActivity implements View.OnClickListener{
         ButtonSignIn.setOnClickListener(this);
         textViewSignUp.setOnClickListener(this);
 
-        if( firebaseAuth.getCurrentUser() != null) {
-            finish();
-            startActivity( new Intent(getApplicationContext(),LogoutActivity.class));
-        }
-
     }
 
     private void userLogin(){

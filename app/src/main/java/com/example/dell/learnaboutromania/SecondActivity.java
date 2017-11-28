@@ -37,11 +37,6 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_second);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        if( firebaseAuth.getCurrentUser()!= null) {
-
-                finish();
-                startActivity( new Intent(getApplicationContext(),LogoutActivity.class));
-            }
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
@@ -79,7 +74,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 if (task.isSuccessful()) {
 
                     finish();
-                    startActivity(new Intent(getApplicationContext(), LogoutActivity.class));
+                    startActivity(new Intent(getApplicationContext(), ChooseActivity.class));
 
                 }
                  else {
