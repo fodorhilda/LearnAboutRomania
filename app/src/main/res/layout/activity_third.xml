@@ -9,74 +9,75 @@
 
     <Button
         android:id="@+id/History"
-        android:layout_width="459dp"
-        android:layout_height="142dp"
+        android:layout_width="170dp"
+        android:layout_height="59dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:background="@null"
+
+        android:background="@color/colorPrimaryDark"
         android:text="History"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.055" />
 
     <Button
         android:id="@+id/BestPlaces"
-        android:layout_width="459dp"
-        android:layout_height="142dp"
+        android:layout_width="268dp"
+        android:layout_height="63dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:background="@null"
         android:text="Best Places"
+        android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.648"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.232" />
+        app:layout_constraintVertical_bias="0.233" />
 
     <Button
         android:id="@+id/LearnRomanian"
-        android:layout_width="459dp"
-        android:layout_height="142dp"
+        android:layout_width="287dp"
+        android:layout_height="66dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:background="@null"
+        android:background="@color/colorPrimaryDark"
+
         android:text="Learn Romanian"
         android:textAlignment="center"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
+        app:layout_constraintVertical_bias="0.454" />
 
     <Button
         android:id="@+id/TryYourself"
-        android:layout_width="459dp"
-        android:layout_height="142dp"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:background="@null"
+        android:background="@color/colorPrimaryDark"
+
         android:text="Test Yourself"
         android:textAlignment="center"
         android:textColor="@android:color/holo_orange_dark"
@@ -87,28 +88,28 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705" />
+        app:layout_constraintVertical_bias="0.706" />
 
     <Button
         android:id="@+id/LogOut"
-        android:layout_width="459dp"
-        android:layout_height="142dp"
+        android:layout_width="170dp"
+        android:layout_height="59dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:background="@null"
+        android:background="@color/colorPrimaryDark"
+
         android:text="Log Out"
         android:textAlignment="center"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.648"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.896" />
 
 
 
